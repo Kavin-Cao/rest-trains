@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    {{template "common.tpl" .}}
+
+    <style>
+        .center-block{
+            height: 400px;
+            width: 250px;
+            margin-top: 150px;
+        }
+        .input-group{
+            margin-bottom: 28px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="center-block">
+    <form action="/login" method="post">
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">账户</span>
+            <input type="text" class="form-control" aria-describedby="sizing-addon2">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">密码</span>
+            <input type="password" class="form-control" aria-describedby="sizing-addon2">
+        </div>
+
+        <p>
+            <button type="submit" class="btn btn-info btn-lg btn-block">登录</button>
+        </p>
+    </form>
+</div>
+{{template "footer.tpl" .}}
+</body>
+</html>
